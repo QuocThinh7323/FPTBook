@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\QUOC THINH\\source\\repos\\FPTBook\\FPTBook\\FPTBook.csproj": {}
+    "D:\\FPTBook1670\\FPTBook\\FPTBook.csproj": {}
   },
   "projects": {
-    "C:\\Users\\QUOC THINH\\source\\repos\\FPTBook\\FPTBook\\FPTBook.csproj": {
+    "D:\\FPTBook1670\\FPTBook\\FPTBook.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\QUOC THINH\\source\\repos\\FPTBook\\FPTBook\\FPTBook.csproj",
+        "projectUniqueName": "D:\\FPTBook1670\\FPTBook\\FPTBook.csproj",
         "projectName": "FPTBook",
-        "projectPath": "C:\\Users\\QUOC THINH\\source\\repos\\FPTBook\\FPTBook\\FPTBook.csproj",
-        "packagesPath": "C:\\Users\\QUOC THINH\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\QUOC THINH\\source\\repos\\FPTBook\\FPTBook\\obj\\",
+        "projectPath": "D:\\FPTBook1670\\FPTBook\\FPTBook.csproj",
+        "packagesPath": "C:\\Users\\BAO ANH\\.nuget\\packages\\",
+        "outputPath": "D:\\FPTBook1670\\FPTBook\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\QUOC THINH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\BAO ANH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
