@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\FPTBook",
+    "\\FPTBook\\Models",
+    "\\FPTBook\\Properties",
+    "\\FPTBook\\Views"
   ],
-  "SelectedNode": "\\FPTBook.sln",
+  "SelectedNode": "\\FPTBook\\Models",
   "PreviewInSolutionExplorer": false
 }
