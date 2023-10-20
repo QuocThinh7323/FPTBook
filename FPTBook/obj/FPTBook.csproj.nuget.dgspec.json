@@ -1,37 +1,24 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "D:\\1670\\BOOKSTORE\\FPTBook\\FPTBook.csproj": {}
+    "D:\\FPTBook1670\\FPTBook\\FPTBook.csproj": {}
   },
   "projects": {
-    "D:\\1670\\BOOKSTORE\\FPTBook\\FPTBook.csproj": {
+    "D:\\FPTBook1670\\FPTBook\\FPTBook.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\1670\\BOOKSTORE\\FPTBook\\FPTBook.csproj",
+        "projectUniqueName": "D:\\FPTBook1670\\FPTBook\\FPTBook.csproj",
         "projectName": "FPTBook",
-        "projectPath": "D:\\1670\\BOOKSTORE\\FPTBook\\FPTBook.csproj",
-        "packagesPath": "C:\\Users\\NGUYEN HA NHAT LINH\\.nuget\\packages\\",
-        "outputPath": "D:\\1670\\BOOKSTORE\\FPTBook\\obj\\",
+        "projectPath": "D:\\FPTBook1670\\FPTBook\\FPTBook.csproj",
+        "packagesPath": "C:\\Users\\BAO ANH\\.nuget\\packages\\",
+        "outputPath": "D:\\FPTBook1670\\FPTBook\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\NGUYEN HA NHAT LINH\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-    "C:\\Users\\QUOC THINH\\source\\repos\\FPTBook1\\FPTBook\\FPTBook.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\QUOC THINH\\source\\repos\\FPTBook1\\FPTBook\\FPTBook.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\QUOC THINH\\source\\repos\\FPTBook1\\FPTBook\\FPTBook.csproj",
-        "projectName": "FPTBook",
-        "projectPath": "C:\\Users\\QUOC THINH\\source\\repos\\FPTBook1\\FPTBook\\FPTBook.csproj",
-        "packagesPath": "C:\\Users\\QUOC THINH\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\QUOC THINH\\source\\repos\\FPTBook1\\FPTBook\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\QUOC THINH\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 4693374c87e469de43512a8503b2ff224c46c3ee
+          "C:\\Users\\BAO ANH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -97,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
