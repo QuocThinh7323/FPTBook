@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "D:\\1670\\BOOKSTORE\\FPTBook\\FPTBook.csproj": {}
   },
   "projects": {
@@ -16,22 +15,6 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\NGUYEN HA NHAT LINH\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-    "C:\\Users\\QUOC THINH\\source\\repos\\FPTBook1\\FPTBook\\FPTBook.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\QUOC THINH\\source\\repos\\FPTBook1\\FPTBook\\FPTBook.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\QUOC THINH\\source\\repos\\FPTBook1\\FPTBook\\FPTBook.csproj",
-        "projectName": "FPTBook",
-        "projectPath": "C:\\Users\\QUOC THINH\\source\\repos\\FPTBook1\\FPTBook\\FPTBook.csproj",
-        "packagesPath": "C:\\Users\\QUOC THINH\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\QUOC THINH\\source\\repos\\FPTBook1\\FPTBook\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\QUOC THINH\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 4693374c87e469de43512a8503b2ff224c46c3ee
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
