@@ -3335,11 +3335,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< Updated upstream
       "projectUniqueName": "D:\\1670\\BOOKSTORE\\FPTBook\\FPTBook.csproj",
       "projectName": "FPTBook",
       "projectPath": "D:\\1670\\BOOKSTORE\\FPTBook\\FPTBook.csproj",
       "packagesPath": "C:\\Users\\NGUYEN HA NHAT LINH\\.nuget\\packages\\",
       "outputPath": "D:\\1670\\BOOKSTORE\\FPTBook\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\NGUYEN HA NHAT LINH\\Source\\Repos\\FPTBook\\FPTBook\\FPTBook.csproj",
+      "projectName": "FPTBook",
+      "projectPath": "C:\\Users\\NGUYEN HA NHAT LINH\\Source\\Repos\\FPTBook\\FPTBook\\FPTBook.csproj",
+      "packagesPath": "C:\\Users\\NGUYEN HA NHAT LINH\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\NGUYEN HA NHAT LINH\\Source\\Repos\\FPTBook\\FPTBook\\obj\\",
+>>>>>>> Stashed changes
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\NGUYEN HA NHAT LINH\\AppData\\Roaming\\NuGet\\NuGet.Config",
