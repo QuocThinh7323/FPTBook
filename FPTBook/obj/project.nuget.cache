@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< Updated upstream
-  "dgSpecHash": "uLjj/lkCLTNICiEJ5FDOQ9P9Pb2C19/d5rTvl4xM+/rHwfSK/yk639DDEN09xFFyrRcUWbfRYUc7YyqiJnyoOA==",
+  "dgSpecHash": "ZfflHoiaWZnumF5ABY+mjFll11yJg6SCFjfx3hvlJXGiMiCRgvBaEGZgWV9FWHcn9YdzMfzhciwZbETq9qF+GQ==",
   "success": true,
-  "projectFilePath": "D:\\1670\\BOOKSTORE\\FPTBook\\FPTBook.csproj",
-=======
-  "dgSpecHash": "JBoFQTwKEqy0MQ1MZTdQvJ2+tXjVDF4RU5NpkM9J++w3pKvHf41s/+vPUqCsn0eqyGiI9DxYnDXDgO25q3/sig==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\NGUYEN HA NHAT LINH\\Source\\Repos\\FPTBook\\FPTBook\\FPTBook.csproj",
->>>>>>> Stashed changes
+  "projectFilePath": "C:\\Users\\NGUYEN HA NHAT LINH\\source\\repos\\FPTBook\\FPTBook\\FPTBook.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\NGUYEN HA NHAT LINH\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\NGUYEN HA NHAT LINH\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
@@ -80,5 +74,12 @@
     "C:\\Users\\NGUYEN HA NHAT LINH\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\NGUYEN HA NHAT LINH\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\NGUYEN HA NHAT LINH\\source\\repos\\FPTBook\\FPTBook\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

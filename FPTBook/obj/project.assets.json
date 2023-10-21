@@ -3335,19 +3335,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< Updated upstream
-      "projectUniqueName": "D:\\1670\\BOOKSTORE\\FPTBook\\FPTBook.csproj",
+      "projectUniqueName": "C:\\Users\\NGUYEN HA NHAT LINH\\source\\repos\\FPTBook\\FPTBook\\FPTBook.csproj",
       "projectName": "FPTBook",
-      "projectPath": "D:\\1670\\BOOKSTORE\\FPTBook\\FPTBook.csproj",
+      "projectPath": "C:\\Users\\NGUYEN HA NHAT LINH\\source\\repos\\FPTBook\\FPTBook\\FPTBook.csproj",
       "packagesPath": "C:\\Users\\NGUYEN HA NHAT LINH\\.nuget\\packages\\",
-      "outputPath": "D:\\1670\\BOOKSTORE\\FPTBook\\obj\\",
-=======
-      "projectUniqueName": "C:\\Users\\NGUYEN HA NHAT LINH\\Source\\Repos\\FPTBook\\FPTBook\\FPTBook.csproj",
-      "projectName": "FPTBook",
-      "projectPath": "C:\\Users\\NGUYEN HA NHAT LINH\\Source\\Repos\\FPTBook\\FPTBook\\FPTBook.csproj",
-      "packagesPath": "C:\\Users\\NGUYEN HA NHAT LINH\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\NGUYEN HA NHAT LINH\\Source\\Repos\\FPTBook\\FPTBook\\obj\\",
->>>>>>> Stashed changes
+      "outputPath": "C:\\Users\\NGUYEN HA NHAT LINH\\source\\repos\\FPTBook\\FPTBook\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\NGUYEN HA NHAT LINH\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3419,5 +3411,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\NGUYEN HA NHAT LINH\\source\\repos\\FPTBook\\FPTBook\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

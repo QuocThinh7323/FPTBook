@@ -1,31 +1,17 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< Updated upstream
-    "D:\\1670\\BOOKSTORE\\FPTBook\\FPTBook.csproj": {}
+    "C:\\Users\\NGUYEN HA NHAT LINH\\source\\repos\\FPTBook\\FPTBook\\FPTBook.csproj": {}
   },
   "projects": {
-    "D:\\1670\\BOOKSTORE\\FPTBook\\FPTBook.csproj": {
+    "C:\\Users\\NGUYEN HA NHAT LINH\\source\\repos\\FPTBook\\FPTBook\\FPTBook.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\1670\\BOOKSTORE\\FPTBook\\FPTBook.csproj",
+        "projectUniqueName": "C:\\Users\\NGUYEN HA NHAT LINH\\source\\repos\\FPTBook\\FPTBook\\FPTBook.csproj",
         "projectName": "FPTBook",
-        "projectPath": "D:\\1670\\BOOKSTORE\\FPTBook\\FPTBook.csproj",
+        "projectPath": "C:\\Users\\NGUYEN HA NHAT LINH\\source\\repos\\FPTBook\\FPTBook\\FPTBook.csproj",
         "packagesPath": "C:\\Users\\NGUYEN HA NHAT LINH\\.nuget\\packages\\",
-        "outputPath": "D:\\1670\\BOOKSTORE\\FPTBook\\obj\\",
-=======
-    "C:\\Users\\NGUYEN HA NHAT LINH\\Source\\Repos\\FPTBook\\FPTBook\\FPTBook.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\NGUYEN HA NHAT LINH\\Source\\Repos\\FPTBook\\FPTBook\\FPTBook.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\NGUYEN HA NHAT LINH\\Source\\Repos\\FPTBook\\FPTBook\\FPTBook.csproj",
-        "projectName": "FPTBook",
-        "projectPath": "C:\\Users\\NGUYEN HA NHAT LINH\\Source\\Repos\\FPTBook\\FPTBook\\FPTBook.csproj",
-        "packagesPath": "C:\\Users\\NGUYEN HA NHAT LINH\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\NGUYEN HA NHAT LINH\\Source\\Repos\\FPTBook\\FPTBook\\obj\\",
->>>>>>> Stashed changes
+        "outputPath": "C:\\Users\\NGUYEN HA NHAT LINH\\source\\repos\\FPTBook\\FPTBook\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\NGUYEN HA NHAT LINH\\AppData\\Roaming\\NuGet\\NuGet.Config",
