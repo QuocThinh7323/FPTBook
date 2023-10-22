@@ -9,49 +9,113 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FPTBook
 build_property.RootNamespace = FPTBook
-build_property.ProjectDir = D:\FPTBook1670\FPTBook\
+build_property.ProjectDir = C:\Users\NGUYEN HA NHAT LINH\Source\Repos\FPTBook\FPTBook\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\FPTBook1670\FPTBook
+build_property.MSBuildProjectDirectory = C:\Users\NGUYEN HA NHAT LINH\Source\Repos\FPTBook\FPTBook
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/FPTBook1670/FPTBook/Areas/Identity/Pages/_ViewStart.cshtml]
+[C:/Users/NGUYEN HA NHAT LINH/Source/Repos/FPTBook/FPTBook/Areas/Identity/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FPTBook1670/FPTBook/Views/Home/Index.cshtml]
+[C:/Users/NGUYEN HA NHAT LINH/Source/Repos/FPTBook/FPTBook/Views/Authors/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NGUYEN HA NHAT LINH/Source/Repos/FPTBook/FPTBook/Views/Authors/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NGUYEN HA NHAT LINH/Source/Repos/FPTBook/FPTBook/Views/Authors/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NGUYEN HA NHAT LINH/Source/Repos/FPTBook/FPTBook/Views/Authors/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aG9yc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NGUYEN HA NHAT LINH/Source/Repos/FPTBook/FPTBook/Views/Books/Add2Cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcQWRkMkNhcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NGUYEN HA NHAT LINH/Source/Repos/FPTBook/FPTBook/Views/Books/CheckOut.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcQ2hlY2tPdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NGUYEN HA NHAT LINH/Source/Repos/FPTBook/FPTBook/Views/Books/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NGUYEN HA NHAT LINH/Source/Repos/FPTBook/FPTBook/Views/Books/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NGUYEN HA NHAT LINH/Source/Repos/FPTBook/FPTBook/Views/Books/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NGUYEN HA NHAT LINH/Source/Repos/FPTBook/FPTBook/Views/Books/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NGUYEN HA NHAT LINH/Source/Repos/FPTBook/FPTBook/Views/Books/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQm9va3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NGUYEN HA NHAT LINH/Source/Repos/FPTBook/FPTBook/Views/Categories/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NGUYEN HA NHAT LINH/Source/Repos/FPTBook/FPTBook/Views/Categories/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NGUYEN HA NHAT LINH/Source/Repos/FPTBook/FPTBook/Views/Categories/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NGUYEN HA NHAT LINH/Source/Repos/FPTBook/FPTBook/Views/Categories/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NGUYEN HA NHAT LINH/Source/Repos/FPTBook/FPTBook/Views/Categories/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/NGUYEN HA NHAT LINH/Source/Repos/FPTBook/FPTBook/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FPTBook1670/FPTBook/Views/Home/Shop.cshtml]
+[C:/Users/NGUYEN HA NHAT LINH/Source/Repos/FPTBook/FPTBook/Views/Home/Shop.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaG9wLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FPTBook1670/FPTBook/Views/Shared/AdminLayout.cshtml]
+[C:/Users/NGUYEN HA NHAT LINH/Source/Repos/FPTBook/FPTBook/Views/Shared/AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEFkbWluTGF5b3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FPTBook1670/FPTBook/Views/Shared/Error.cshtml]
+[C:/Users/NGUYEN HA NHAT LINH/Source/Repos/FPTBook/FPTBook/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FPTBook1670/FPTBook/Views/Shared/_LoginPartial.cshtml]
+[C:/Users/NGUYEN HA NHAT LINH/Source/Repos/FPTBook/FPTBook/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FPTBook1670/FPTBook/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/NGUYEN HA NHAT LINH/Source/Repos/FPTBook/FPTBook/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FPTBook1670/FPTBook/Views/_ViewImports.cshtml]
+[C:/Users/NGUYEN HA NHAT LINH/Source/Repos/FPTBook/FPTBook/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FPTBook1670/FPTBook/Views/_ViewStart.cshtml]
+[C:/Users/NGUYEN HA NHAT LINH/Source/Repos/FPTBook/FPTBook/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/FPTBook1670/FPTBook/Views/Shared/_Layout.cshtml]
+[C:/Users/NGUYEN HA NHAT LINH/Source/Repos/FPTBook/FPTBook/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-bm79rppy57
