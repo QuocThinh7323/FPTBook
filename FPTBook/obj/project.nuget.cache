@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XCFESloikXps9cAIRY5jWh9MvRdSTnqmNznm1KIHaELwRr+d61UKjgJVenERdNwgwR8BCQp1f27CTO1VDQqh0w==",
+  "dgSpecHash": "3KPXzgQqER5AIW1EBtJDpYXG+TVmFCf+804XgFWCZf3foJRXx7//QNklD5f5cvz2GVaS/iNC+whqBctnmhvzfA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\QUOC THINH\\source\\repos\\FPTBook1\\FPTBook\\FPTBook.csproj",
+  "projectFilePath": "C:\\Users\\QUOC THINH\\source\\repos\\FPTBook\\FPTBook\\FPTBook.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\QUOC THINH\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\QUOC THINH\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

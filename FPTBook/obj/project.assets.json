@@ -3335,11 +3335,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\QUOC THINH\\source\\repos\\FPTBook1\\FPTBook\\FPTBook.csproj",
+      "projectUniqueName": "C:\\Users\\QUOC THINH\\source\\repos\\FPTBook\\FPTBook\\FPTBook.csproj",
       "projectName": "FPTBook",
-      "projectPath": "C:\\Users\\QUOC THINH\\source\\repos\\FPTBook1\\FPTBook\\FPTBook.csproj",
+      "projectPath": "C:\\Users\\QUOC THINH\\source\\repos\\FPTBook\\FPTBook\\FPTBook.csproj",
       "packagesPath": "C:\\Users\\QUOC THINH\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\QUOC THINH\\source\\repos\\FPTBook1\\FPTBook\\obj\\",
+      "outputPath": "C:\\Users\\QUOC THINH\\source\\repos\\FPTBook\\FPTBook\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\QUOC THINH\\AppData\\Roaming\\NuGet\\NuGet.Config",

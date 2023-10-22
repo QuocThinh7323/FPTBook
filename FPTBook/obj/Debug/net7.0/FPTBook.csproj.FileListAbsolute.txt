@@ -83,3 +83,15 @@ D:\FPTBook1670\FPTBook\obj\Debug\net7.0\refint\FPTBook.dll
 D:\FPTBook1670\FPTBook\obj\Debug\net7.0\FPTBook.pdb
 D:\FPTBook1670\FPTBook\obj\Debug\net7.0\FPTBook.genruntimeconfig.cache
 D:\FPTBook1670\FPTBook\obj\Debug\net7.0\ref\FPTBook.dll
+C:\Users\QUOC THINH\source\repos\FPTBook\FPTBook\obj\Debug\net7.0\FPTBook.csproj.AssemblyReference.cache
+C:\Users\QUOC THINH\source\repos\FPTBook\FPTBook\obj\Debug\net7.0\FPTBook.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\QUOC THINH\source\repos\FPTBook\FPTBook\obj\Debug\net7.0\FPTBook.AssemblyInfoInputs.cache
+C:\Users\QUOC THINH\source\repos\FPTBook\FPTBook\obj\Debug\net7.0\FPTBook.AssemblyInfo.cs
+C:\Users\QUOC THINH\source\repos\FPTBook\FPTBook\obj\Debug\net7.0\FPTBook.csproj.CoreCompileInputs.cache
+C:\Users\QUOC THINH\source\repos\FPTBook\FPTBook\obj\Debug\net7.0\FPTBook.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\QUOC THINH\source\repos\FPTBook\FPTBook\obj\Debug\net7.0\FPTBook.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\QUOC THINH\source\repos\FPTBook\FPTBook\obj\Debug\net7.0\FPTBook.RazorAssemblyInfo.cache
+C:\Users\QUOC THINH\source\repos\FPTBook\FPTBook\obj\Debug\net7.0\FPTBook.RazorAssemblyInfo.cs
+C:\Users\QUOC THINH\source\repos\FPTBook\FPTBook\obj\Debug\net7.0\FPTBook.dll
+C:\Users\QUOC THINH\source\repos\FPTBook\FPTBook\obj\Debug\net7.0\refint\FPTBook.dll
+C:\Users\QUOC THINH\source\repos\FPTBook\FPTBook\obj\Debug\net7.0\FPTBook.pdb
