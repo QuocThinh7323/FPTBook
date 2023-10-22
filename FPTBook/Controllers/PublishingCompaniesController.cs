@@ -1,4 +1,5 @@
 ﻿using FPTBook.Data;
+using FPTBook.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -29,14 +30,14 @@ namespace FPTBook.Controllers
                 return NotFound();
             }
 
-            var PublishingCompanies = await _context.PublishingCompanies
+            var publishingCompanies = await _context.PublishingCompanies
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (PublishingCompanies == null)
+            if (publishingCompanies == null)
             {
                 return NotFound();
             }
 
-            return View(PublishingCompanies);
+            return View(publishingCompanies);
         }
 
         // GET: PublishingCompanies/Create
@@ -54,11 +55,11 @@ namespace FPTBook.Controllers
         {
             if (ModelState.IsValid)
             {
-                _context.Add(PublishingCompanies);
+                _context.Add(publishingCompanies);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(PublishingCompanies);
+            return View(publishingCompanies);
         }
 
         // GET: PublishingCompanies/Edit/5
@@ -69,12 +70,12 @@ namespace FPTBook.Controllers
                 return NotFound();
             }
 
-            var PublishingCompanies = await _context.PublishingCompanies.FindAsync(id);
-            if (PublishingCompanies == null)
+            var publishingCompanies = await _context.PublishingCompanies.FindAsync(id);
+            if (publishingCompanies == null)
             {
                 return NotFound();
             }
-            return View(PublishingCompanies);
+            return View(publishingCompanies);
         }
 
         // POST: PublishingCompanies/Edit/5
@@ -84,7 +85,7 @@ namespace FPTBook.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Name")] PublishingCompanies publishingCompanies)
         {
-            if (id != PublishingCompanies.Id)
+            if (id != publishingCompanies.Id)
             {
                 return NotFound();
             }
@@ -93,12 +94,12 @@ namespace FPTBook.Controllers
             {
                 try
                 {
-                    _context.Update(PublishingCompanies);
+                    _context.Update(publishingCompanies);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!PublishingCompanyExists(PublishingCompanies.Id))
+                    if (!PublishingCompanyExists(publishingCompanies.Id))
                     {
                         return NotFound();
                     }
@@ -109,7 +110,7 @@ namespace FPTBook.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(PublishingCompanies);
+            return View(publishingCompanies);
         }
 
         // GET: PublishingCompanies/Delete/5
@@ -120,14 +121,14 @@ namespace FPTBook.Controllers
                 return NotFound();
             }
 
-            var PublishingCompanies = await _context.PublishingCompanies
+            var publishingCompanies = await _context.PublishingCompanies
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (PublishingCompanies == null)
+            if (publishingCompanies == null)
             {
                 return NotFound();
             }
 
-            return View(PublishingCompanies);
+            return View(publishingCompanies);
         }
 
         // POST: PublishingCompanies/Delete/5
@@ -139,10 +140,10 @@ namespace FPTBook.Controllers
             {
                 return Problem("Entity set 'ApplicationDbContext.PublishingCompany'  is null.");
             }
-            var PublishingCompanies = await _context.PublishingCompanies.FindAsync(id);
-            if (PublishingCompanies != null)
+            var publishingCompanies = await _context.PublishingCompanies.FindAsync(id);
+            if (publishingCompanies != null)
             {
-                _context.PublishingCompanies.Remove(PublishingCompanies);
+                _context.PublishingCompanies.Remove(publishingCompanies);
             }
 
             await _context.SaveChangesAsync();
