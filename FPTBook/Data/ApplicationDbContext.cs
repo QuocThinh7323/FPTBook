@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using FPTBook.Models;
 
 namespace FPTBook.Data
 {
@@ -9,5 +10,7 @@ namespace FPTBook.Data
             : base(options)
         {
         }
+        public DbSet<FPTBook.Models.PublishingCompanies> PublishingCompanies { get; set; } = default!;
+
     }
 }
