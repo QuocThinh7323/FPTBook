@@ -18,7 +18,6 @@
 
   <ItemGroup>
     <Folder Include="Views\Books\" />
-    <Folder Include="Views\UserRoles\" />
   </ItemGroup>
 
 </Project>
