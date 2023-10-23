@@ -11,6 +11,7 @@ namespace FPTBook.Data
         {
         }
         public DbSet<FPTBook.Models.PublishingCompanies> PublishingCompanies { get; set; } = default!;
-
+        public DbSet<FPTBook.Models.Category> Category { get; set; } = default!;
+        public DbSet<FPTBook.Models.TmpCategory> TmpCategory { get; set; } = default!;
     }
 }
