@@ -56,7 +56,7 @@ namespace FPTBook.Models
         }
     }
 
-    public class PublishingCompany
+    public class PublishingCompanies
     {
         public int Id { get; set; }
         public string? Name { get; set; }
