@@ -1,0 +1,91 @@
+﻿@model FPTBook.Data.CheckOut
+@{
+    ViewData["Title"] = "Checkout";
+	decimal total = 0;
+}
+
+<section class="header_text sub">
+	<img class="pageBanner" src="~/themes/images/pageBanner.png" alt="New products">
+	<h4><span>Check Out</span></h4>
+</section>
+<section class="main-content">
+    <div class="row">
+        <div class="col-12">
+            <div class="accordion-inner">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4>Your Order</h4>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Remove</th>
+                                    <th>Image</th>
+                                    <th>Product Name</th>
+                                    <th>Quantity</th>
+                                    <th>Unit Price</th>
+                                    <th>Total</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var cartitem in Model.CartItems)
+                                {
+                                    var subTotal = cartitem.Quantity * cartitem.Book.Price;
+                                    total += subTotal;
+
+                                    <tr>
+                                        <td>
+                                            <input type="checkbox" value="option1">
+                                        </td>
+                                        <td>
+                                            <img class="img-fluid" style="width: 20%" alt="Book Image" src="/Image/@cartitem.Book.ImgFileName">
+                                        </td>
+                                        <td>@cartitem.Book.Name</td>
+                                        <td>
+                                            <input asp-for="@cartitem.Quantity" id="@($"quantity-{cartitem.Book.Id}")" class="form-control input-mini" />
+                                        </td>
+                                        <td>$@cartitem.Book.Price</td>
+                                        <td>$@subTotal</td>
+                                        <td>
+                                            <button class="btn btn-outline-primary updatecartitem" data-productid="@cartitem.Book.Id">Update</button>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <div class="block">
+                            <h4 class="title">
+                                <p class="cart-total text-end">
+                                    <strong>Total</strong>: $@(total.ToString("n0"))<br>
+                                </p>
+                            </h4>
+                        </div>
+                    </div>
+                    <form class="col-md-6" asp-controller="Cart" asp-action="Checkout" method="post">
+                        <h4>Your Personal Details</h4>
+                        <!-- User information -->
+                        <div class="mb-3">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="firstName" asp-for="@Model.User.FirstName">
+                        </div>
+                        <div class="mb-3">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" asp-for="@Model.User.LastName">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="text" class="form-control" id="email" asp-for="@Model.User.Email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="telephone" class="form-label">Telephone</label>
+                            <input type="text" class="form-control" id="telephone" asp-for="@Model.User.PhoneNumber">
+                        </div>
+                        <div class="buttons text-center">
+                            <button class="btn btn-primary" type="submit" id="checkout">Checkout</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
