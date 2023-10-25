@@ -1,0 +1,45 @@
+﻿@model List<ApplicationUser>
+
+@{
+    ViewData["Title"] = "Search Users";
+}
+
+<h2>Search Users</h2>
+
+<form asp-controller="UsersList" asp-action="Search" method="get">
+    <div class="form-group">
+        <input type="text" name="searchstr" placeholder="Search by username" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+@if (Model != null && Model.Count > 0)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <!-- Other user attributes -->
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td>@user.UserName</td>
+                    <!-- Display other user attributes as needed -->
+                @if (User.IsInRole("Admin"))
+                {
+                    <td>
+                        <a asp-action="SetPassword" asp-route-id="@user.Id">SetPassword</a>
+                    </td>
+                }
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No users found.</p>
+}

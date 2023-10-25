@@ -1,0 +1,48 @@
+﻿@model List<FPTBook.Models.Book>
+
+@{
+    ViewData["Title"] = "Search Results";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Search Results</h1>
+</div>
+
+<div id="tab-1" class="tab-pane fade show p-0 active">
+    <div class="row g-4">
+
+        @foreach (var book in Model)
+        {
+            <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="product-item">
+                    <div class="position-relative bg-light overflow-hidden">
+                        <img class="img-fluid w-100" src="~/Image/@book.ImgFileName" style="width: 200px; height: 300px" alt="">                        
+                    </div>
+                    <div class="text-center p-4">
+                        <a class="d-block h5 mb-2" href="">@book.Name</a>
+                        <span class="text-primary me-1">@book.Price$</span>                        
+                    </div>
+                    <div class="d-flex border-top">
+                        <small class="w-50 text-center border-end py-2">
+                            <a class="text-body" asp-controller="Books" asp-action="Details" asp-route-id="@book.Id"><i class="fa fa-eye text-primary me-2"></i>View detail</a>
+                        </small>
+                        <small class="w-50 text-center py-2">
+                            <form asp-controller="Books" asp-action="Apptocart" method="post">
+                                <input type="hidden" name="id" value="@book.Id" />
+                                <input type="hidden" name="name" value="@book.Name" />
+                                <input type="hidden" name="price" value="@book.Price" />
+                                <input type="hidden" name="quantity" value=1 />
+                                <a class="text-body" href=""><i class="fa fa-shopping-bag text-primary me-2"></i>Add to cart</a>
+                            </form>
+                        </small>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+<p class="text-center">
+    <a asp-action="Index">Back to Home</a>
+</p>

@@ -1,0 +1,39 @@
+﻿@model IEnumerable<FPTBookDemo.Models.ApplicationUser>
+@{
+    ViewData["Title"] = "User List";
+}
+<h1>User List</h1>
+
+<form asp-controller="UsersList" asp-action="Search" method="get">
+    <div class="form-group">
+        <input type="text" name="searchstr" placeholder="Search by username" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                UserName
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+<tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.UserName
+            </td>
+                @if (User.IsInRole("Admin"))
+                {
+                    <td>
+                        <a asp-action="SetPassword" asp-route-id="@item.Id">SetPassword</a>
+                    </td>
+                }
+        </tr>
+    }
+</tbody>
+</table>

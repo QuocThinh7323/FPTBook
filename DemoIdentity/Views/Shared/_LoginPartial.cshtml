@@ -1,0 +1,59 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<ul class="user-menu">
+    @if (SignInManager.IsSignedIn(User))
+    {
+        // Check if the user is in a specific role
+        bool isAdmin = User.IsInRole("Admin");
+        bool isOwner = User.IsInRole("Owner");
+        if (isAdmin)
+        {
+            <li><a asp-area="Admin" asp-controller="UsersList" asp-action="Index">User List</a></li>
+            <li><a asp-area="Admin" asp-controller="UserRoles" asp-action="Index">User Role</a></li>
+            <li><a asp-area="Admin" asp-controller="RoleManager" asp-action="Index">Role Manager</a></li>
+
+        } 
+        else if (isOwner)
+        {
+            <li><a asp-area="Owner" asp-controller="Categories" asp-action="Index">Categories</a></li>
+            <li><a asp-area="Owner" asp-controller="Authors" asp-action="Index">Authors</a></li>
+            <li><a asp-area="Owner" asp-controller="PublishingCompanies" asp-action="Index">Publishing</a></li>
+            <li><a asp-area="Owner" asp-controller="Books" asp-action="Index">Books</a></li>
+
+        }
+        else
+        {
+            <li><a asp-controller="Home" asp-action="Profile">My Account</a></li>
+            <li><a asp-controller="Home" asp-action="Cart">Your Cart</a></li>
+            <li><a asp-controller="Home" asp-action="Checkout">Checkout</a></li>
+        }
+
+
+        @if (UserManager.GetUserAsync(User).Result.ProfilePicture != null)
+        {
+            <li>
+                <img class="rounded-circle" style="width: 40px; height: 40px; object-fit: cover;" src="data:image/*;base64,@(Convert.ToBase64String(UserManager.GetUserAsync(User).Result.ProfilePicture))">
+            </li>
+        }
+
+        <li>
+            <a asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @User.Identity?.Name!</a>
+        </li>
+        <li>
+            <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                <button type="submit" class="btn btn-link text-dark">Logout</button>
+            </form>
+        </li>
+    }
+    else
+    {
+        <li>
+            <a asp-area="Identity" asp-page="/Account/Register">Register</a>
+        </li>
+        <li>
+            <a asp-area="Identity" asp-page="/Account/Login">Login</a>
+        </li>
+    }
+</ul>

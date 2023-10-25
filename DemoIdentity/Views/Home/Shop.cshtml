@@ -1,0 +1,266 @@
+﻿@{
+    ViewData["Title"] = "Help";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model IEnumerable<FPTBook.Models.Book>
+
+@section Stylesheets {
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            color: #444444;
+        }
+
+        a,
+        a:hover {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .section-products {
+            padding: 80px 0 54px;
+        }
+
+            .section-products .header {
+                margin-bottom: 50px;
+            }
+
+                .section-products .header h3 {
+                    font-size: 1rem;
+                    color: #fe302f;
+                    font-weight: 500;
+                }
+
+                .section-products .header h2 {
+                    font-size: 2.2rem;
+                    font-weight: 400;
+                    color: #444444;
+                }
+
+            .section-products .single-product {
+                margin-bottom: 26px;
+            }
+
+                .section-products .single-product .part-1 {
+                    position: relative;
+                    height: 290px;
+                    max-height: 290px;
+                    margin-bottom: 20px;
+                    overflow: hidden;
+                }
+
+                    .section-products .single-product .part-1::before {
+                        position: absolute;
+                        content: "";
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: -1;
+                        transition: all 0.3s;
+                    }
+
+                .section-products .single-product:hover .part-1::before {
+                    transform: scale(1.2,1.2) rotate(5deg);
+                }
+
+            .section-products #product-1 .part-1::before {
+                background-size: cover;
+                transition: all 0.3s;
+            }
+
+            .section-products #product-1 .part-1::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            .section-products #product-2 .part-1::before {
+                background: url("https://i.ibb.co/cLnZjnS/2.jpg") no-repeat center;
+                background-size: cover;
+            }
+
+            .section-products #product-3 .part-1::before {
+                background: url("https://i.ibb.co/L8Nrb7p/1.jpg") no-repeat center;
+                background-size: cover;
+            }
+
+            .section-products #product-4 .part-1::before {
+                background: url("https://i.ibb.co/cLnZjnS/2.jpg") no-repeat center;
+                background-size: cover;
+            }
+
+            .section-products .single-product .part-1 .discount,
+            .section-products .single-product .part-1 .new {
+                position: absolute;
+                top: 15px;
+                left: 20px;
+                color: #ffffff;
+                background-color: #fe302f;
+                padding: 2px 8px;
+                text-transform: uppercase;
+                font-size: 0.85rem;
+            }
+
+            .section-products .single-product .part-1 .new {
+                left: 0;
+                background-color: #444444;
+            }
+
+            .section-products .single-product .part-1 ul {
+                position: absolute;
+                bottom: -41px;
+                left: 20px;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                opacity: 0;
+                transition: bottom 0.5s, opacity 0.5s;
+            }
+
+            .section-products .single-product:hover .part-1 ul {
+                bottom: 30px;
+                opacity: 1;
+            }
+
+            .section-products .single-product .part-1 ul li {
+                display: inline-block;
+                margin-right: 4px;
+            }
+
+                .section-products .single-product .part-1 ul li a {
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    background-color: #ffffff;
+                    color: #444444;
+                    text-align: center;
+                    box-shadow: 0 2px 20px rgb(50 50 50 / 10%);
+                    transition: color 0.2s;
+                }
+
+                    .section-products .single-product .part-1 ul li a:hover {
+                        color: #fe302f;
+                    }
+
+            .section-products .single-product .part-2 .product-title {
+                font-size: 1rem;
+            }
+
+            .section-products .single-product .part-2 h4 {
+                display: inline-block;
+                font-size: 1rem;
+            }
+
+            .section-products .single-product .part-2 .product-old-price {
+                position: relative;
+                padding: 0 7px;
+                margin-right: 2px;
+                opacity: 0.6;
+            }
+
+                .section-products .single-product .part-2 .product-old-price::after {
+                    position: absolute;
+                    content: "";
+                    top: 50%;
+                    left: 0;
+                    width: 100%;
+                    height: 1px;
+                    background-color: #444444;
+                    transform: translateY(-50%);
+                }
+    </style>
+	}
+
+<section class="header_text sub">
+    <img class="pageBanner" src="~/themes/images/pageBanner.png" alt="New products">
+    <h4><span>New products</span></h4>
+</section>
+<section class="section-products">
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-md-8 col-lg-6">
+                <div class="header">
+                    <h3>Featured Product</h3>
+                    <h2>Popular Products</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <!-- Single Product -->
+                <div class="col-md-6 col-lg-4 col-xl-3">
+                    <div id="product-1" class="single-product">
+                        <div class="part-1" data-bg-image="/Image/@item.ImgFileName">
+                            <ul>
+                                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                                <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a href="#"><i class="fa-solid fa-plus"></i></a></li>
+                                <li><a href="#"><i class="fa-solid fa-expand"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="part-2">
+                            <h3 class="product-title">@item.Name</h3>
+                            <h4 class="product-price">$@item.Price.ToString("N2")</h4>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>
+@* <section class="main-content">
+    <div class="row">
+        <div class="span12">
+            <ul class="thumbnails listing-products">
+                @foreach (var item in Model)
+                {
+                    <li class="span3">
+                        <div class="product-box">
+                            <span class="sale_tag"></span>
+                            <a asp-controller="Home" asp-action="Detail"><img alt="" src="~/Image/@item.ImgFileName"></a><br />
+                            <a asp-controller="Home" asp-action="Detail" class="title">@item.Name</a><br />
+                            @if (item.Category != null && item.Author != null)
+                            {
+                                <a asp-controller="Home" asp-action="Detail" class="category">
+                                    <p class="card-text" lang="en">Category: @item.Category.Name</p>
+                                    <p class="card-text" lang="en">Author: @item.Author.Name</p>
+                                </a>
+                            }
+                            <p class="price">$@item.Price</p>
+                        </div>
+                    </li>
+
+                }
+            </ul>
+            <hr>
+            <div class="pagination pagination-small pagination-centered">
+                <ul>
+                    <li><a href="#">Prev</a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">Next</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section> *@
+
+@section Scripts{
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var part1Elements = document.querySelectorAll('#product-1 .part-1');
+            part1Elements.forEach(function (element) {
+                var bgImage = element.getAttribute('data-bg-image');
+                element.style.backgroundImage = 'url(' + bgImage + ')';
+            });
+        });
+    </script>
+}

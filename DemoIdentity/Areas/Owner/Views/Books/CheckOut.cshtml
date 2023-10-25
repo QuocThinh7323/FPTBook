@@ -1,0 +1,63 @@
+@using FPTBook.Utils
+@{
+    List<CartItem> myItems = (List<CartItem>)ViewData["myItems"] ?? new List<CartItem>();
+    decimal total = 0;
+    decimal totalb = 0;
+
+    if (myItems.Count == 0)
+    {
+        <h1>Your cart is empty</h1>
+    }
+
+    foreach (var item in myItems)
+    {
+        total += item.Price * item.Quantity;
+
+        if (item.ID == null || item.Title == null || item.Price == null || item.Quantity == null)
+        {
+            <h1>There is an error in your cart</h1>
+            break;
+        }
+    }
+}
+
+<table class="table table-striped">
+    <tr>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+        <th></th>
+        <th></th>
+    </tr>
+    @foreach (var item in myItems)
+    {
+        totalb += item.Price * item.Quantity;
+        <tr>
+            <form asp-action="EditOrder" method="post">
+            <td>@item.Title</td>
+            <td>@item.Price</td>
+            <td><input type="number" min="0" name="quantity" value="@item.Quantity" /></td>
+            <td>@(item.Price * item.Quantity)$</td>
+            <td>
+                <input type="hidden" name="id" value="@item.ID" />
+                <input type="submit" value="Update" class="btn btn-primary" />
+            </td>
+            </form>
+            <td>
+                <form asp-action="RemoveOrderItem" method="post">
+
+                    <input type="hidden" name="id" value="@item.ID" />
+                    <input type="submit" value="Remove" class="btn btn-danger" />
+                </form>
+        </tr>
+    }
+    <tr>
+        <td colspan="3">Total:</td>
+        <td>@totalb$</td>
+    </tr>
+</table>
+<form asp-action="PlaceOrder" method="post">
+    <input type="hidden" name="total" value="@totalb" />
+    <input type="submit" value="Order" class="btn btn-primary" />
+</form>

@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - DemoIdentity</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- global styles -->
+    <link href="~/themes/css/main.css" rel="stylesheet" />
+
+    <script src="~/themes/js/jquery.scrolltotop.js"></script>
+
+    @RenderSection("Stylesheets", required: false)
+</head>
+@using Microsoft.AspNetCore.Identity
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+<body>
+    <div id="top-bar" class="container">
+        <div class="row">
+            <div class="col-4">
+                <form method="POST" class="search_form">
+                    <input type="text" class="form-control" placeholder="eg. T-shirt">
+                </form>
+            </div>
+            <div class="col-8">
+                <div class="account text-end">
+                    <partial name="_LoginPartial.cshtml" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="wrapper" class="container">
+        <nav class="navbar navbar-expand-lg main-menu">
+            <a href="index.html" class="navbar-brand"><img src="~/themes/images/logo.png" class="site_logo" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Index">Homepage</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Shop">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="About">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Contact">Contact Us</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Help">Help</a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Books">Book</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        @RenderBody()
+
+        <section id="footer-bar">
+            <div class="row">
+                <div class="col-md-3">
+                    <h4>Navigation</h4>
+                    <ul class="nav">
+                        <li><a class="nav-link" asp-controller="Home" asp-action="Index">Homepage</a></li>
+                        <li><a class="nav-link" asp-controller="Home" asp-action="Shop">Shop</a></li>
+                        <li><a class="nav-link" asp-controller="Home" asp-action="About">About Us</a></li>
+                        <li><a class="nav-link" asp-controller="Home" asp-action="Contact">Contact Us</a></li>
+                        <li><a class="nav-link" asp-controller="Home" asp-action="Help">Help</a></li>
+                        <li><a class="nav-link" asp-controller="Home" asp-action="Index">Login</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4>My Account</h4>
+                    <ul class="nav">
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Order History</a></li>
+                        <li><a href="#">Wish List</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-5">
+                    <p class="logo"><img src="themes/images/logo.png" class="site_logo" alt=""></p>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since you.</p>
+                    <br />
+                    <span class="social-icons">
+                        <a class="facebook" href="#">Facebook</a>
+                        <a class="twitter" href="#">Twitter</a>
+                        <a class="skype" href="#">Skype</a>
+                        <a class="vimeo" href="#">Vimeo</a>
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <section id="copyright">
+            <span>Copyright 2013 bootstrappage template All right reserved.</span>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
