@@ -18,10 +18,10 @@ namespace FPTBookDemo.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> IndexAsync()
+        public IActionResult Index()
         {
-            var applicationDbContext = _context.Book.Include(b => b.Author).Include(b => b.Category).Include(b => b.PublishingCompany);
-            return View(await applicationDbContext.ToListAsync());
+            List<Book> lstBooks = _context.Book.Include(b => b.Author).Include(b => b.Category).Include(b => b.PublishingCompany).ToList();
+            return View(lstBooks);
         }
 
         public async Task<IActionResult> Search(string searchTerm)
