@@ -23,8 +23,8 @@
     <div id="top-bar" class="container">
         <div class="row">
             <div class="col-4">
-                <form method="POST" class="search_form">
-                    <input type="text" class="form-control" placeholder="eg. T-shirt">
+                <form method="POST" asp-controller="Home" asp-action="Search" class="search_form">
+                    <input type="text" class="form-control" name="searchTerm" placeholder="eg. T-shirt">
                 </form>
             </div>
             <div class="col-8">

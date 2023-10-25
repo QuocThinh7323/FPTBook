@@ -6,173 +6,154 @@
 
 @section Stylesheets {
     <style>
-        body {
-            font-family: "Poppins", sans-serif;
-            color: #444444;
+        .thumb-wrapper {
+            padding: 25px 15px;
+            background: #fff;
+            border-radius: 6px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 2px 3px rgba(0,0,0,0.2);
         }
 
-        a,
-        a:hover {
-            text-decoration: none;
-            color: inherit;
+        .item .img-box {
+            height: 120px;
+            margin-bottom: 20px;
+            width: 100%;
+            position: relative;
         }
 
-        .section-products {
-            padding: 80px 0 54px;
+        .item img {
+            max-width: 100%;
+            max-height: 100%;
+            display: inline-block;
+            position: absolute;
+            bottom: 0;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
         }
 
-            .section-products .header {
-                margin-bottom: 50px;
+        .item h4 {
+            font-size: 18px;
+        }
+
+        .item h4, .item p, .item ul {
+            margin-bottom: 5px;
+        }
+
+        .thumb-content .btn {
+            color: #eb4800;
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: bold;
+            background: none;
+            border: 1px solid #eb4800;
+            padding: 6px 14px;
+            margin-top: 5px;
+            line-height: 16px;
+            border-radius: 20px;
+        }
+
+            .thumb-content .btn:hover, .thumb-content .btn:focus {
+                color: #fff;
+                background: #eb4800;
+                box-shadow: none;
             }
 
-                .section-products .header h3 {
-                    font-size: 1rem;
-                    color: #fe302f;
-                    font-weight: 500;
-                }
-
-                .section-products .header h2 {
-                    font-size: 2.2rem;
-                    font-weight: 400;
-                    color: #444444;
-                }
-
-            .section-products .single-product {
-                margin-bottom: 26px;
+            .thumb-content .btn i {
+                font-size: 14px;
+                font-weight: bold;
+                margin-left: 5px;
             }
 
-                .section-products .single-product .part-1 {
-                    position: relative;
-                    height: 290px;
-                    max-height: 290px;
-                    margin-bottom: 20px;
-                    overflow: hidden;
-                }
+        .item-price {
+            font-size: 13px;
+            padding: 2px 0;
+        }
 
-                    .section-products .single-product .part-1::before {
-                        position: absolute;
-                        content: "";
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        z-index: -1;
-                        transition: all 0.3s;
-                    }
-
-                .section-products .single-product:hover .part-1::before {
-                    transform: scale(1.2,1.2) rotate(5deg);
-                }
-
-            .section-products #product-1 .part-1::before {
-                background-size: cover;
-                transition: all 0.3s;
+            .item-price strike {
+                opacity: 0.7;
+                margin-right: 5px;
             }
 
-            .section-products #product-1 .part-1::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-            }
+        .carousel-control-prev, .carousel-control-next {
+            height: 44px;
+            width: 40px;
+            background: #eb4800;
+            margin: auto 0;
+            border-radius: 4px;
+            opacity: 0.8;
+        }
 
-            .section-products #product-2 .part-1::before {
-                background: url("https://i.ibb.co/cLnZjnS/2.jpg") no-repeat center;
-                background-size: cover;
-            }
-
-            .section-products #product-3 .part-1::before {
-                background: url("https://i.ibb.co/L8Nrb7p/1.jpg") no-repeat center;
-                background-size: cover;
-            }
-
-            .section-products #product-4 .part-1::before {
-                background: url("https://i.ibb.co/cLnZjnS/2.jpg") no-repeat center;
-                background-size: cover;
-            }
-
-            .section-products .single-product .part-1 .discount,
-            .section-products .single-product .part-1 .new {
-                position: absolute;
-                top: 15px;
-                left: 20px;
-                color: #ffffff;
-                background-color: #fe302f;
-                padding: 2px 8px;
-                text-transform: uppercase;
-                font-size: 0.85rem;
-            }
-
-            .section-products .single-product .part-1 .new {
-                left: 0;
-                background-color: #444444;
-            }
-
-            .section-products .single-product .part-1 ul {
-                position: absolute;
-                bottom: -41px;
-                left: 20px;
-                margin: 0;
-                padding: 0;
-                list-style: none;
-                opacity: 0;
-                transition: bottom 0.5s, opacity 0.5s;
-            }
-
-            .section-products .single-product:hover .part-1 ul {
-                bottom: 30px;
+            .carousel-control-prev:hover, .carousel-control-next:hover {
+                background: #eb4800;
                 opacity: 1;
             }
 
-            .section-products .single-product .part-1 ul li {
+            .carousel-control-prev i, .carousel-control-next i {
+                font-size: 36px;
+                position: absolute;
+                top: 50%;
                 display: inline-block;
-                margin-right: 4px;
+                margin: -19px 0 0 0;
+                z-index: 5;
+                left: 0;
+                right: 0;
+                color: #fff;
+                text-shadow: none;
+                font-weight: bold;
             }
 
-                .section-products .single-product .part-1 ul li a {
-                    display: inline-block;
-                    width: 40px;
-                    height: 40px;
-                    line-height: 40px;
-                    background-color: #ffffff;
-                    color: #444444;
-                    text-align: center;
-                    box-shadow: 0 2px 20px rgb(50 50 50 / 10%);
-                    transition: color 0.2s;
+            .carousel-control-prev i {
+                margin-left: -2px;
+            }
+
+            .carousel-control-next i {
+                margin-right: -4px;
+            }
+
+        .carousel-indicators {
+            bottom: -50px;
+        }
+
+            .carousel-indicators li, .carousel-indicators li.active {
+                width: 10px;
+                height: 10px;
+                margin: 4px;
+                border-radius: 50%;
+                border: none;
+            }
+
+            .carousel-indicators li {
+                background: rgba(0, 0, 0, 0.2);
+            }
+
+                .carousel-indicators li.active {
+                    background: rgba(0, 0, 0, 0.6);
                 }
 
-                    .section-products .single-product .part-1 ul li a:hover {
-                        color: #fe302f;
-                    }
+        .wish-icon {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            z-index: 99;
+            cursor: pointer;
+            font-size: 16px;
+            color: #abb0b8;
+        }
 
-            .section-products .single-product .part-2 .product-title {
-                font-size: 1rem;
+            .wish-icon .fa-heart {
+                color: #ff6161;
             }
 
-            .section-products .single-product .part-2 h4 {
-                display: inline-block;
-                font-size: 1rem;
-            }
+        .star-rating li {
+            padding: 0;
+        }
 
-            .section-products .single-product .part-2 .product-old-price {
-                position: relative;
-                padding: 0 7px;
-                margin-right: 2px;
-                opacity: 0.6;
-            }
-
-                .section-products .single-product .part-2 .product-old-price::after {
-                    position: absolute;
-                    content: "";
-                    top: 50%;
-                    left: 0;
-                    width: 100%;
-                    height: 1px;
-                    background-color: #444444;
-                    transform: translateY(-50%);
-                }
+        .star-rating i {
+            font-size: 14px;
+            color: #eb4800;
+        }
     </style>
 	}
 
@@ -194,19 +175,25 @@
             @foreach (var item in Model)
             {
                 <!-- Single Product -->
-                <div class="col-md-6 col-lg-4 col-xl-3">
-                    <div id="product-1" class="single-product">
-                        <div class="part-1" data-bg-image="/Image/@item.ImgFileName">
-                            <ul>
-                                <li><a asp-route="addcart" asp-route-productid="@item.Id"><i class="fa-solid fa-cart-shopping"></i></a></li>
-                                <li><a href="#"><i class="fa-regular fa-heart"></i></a></li>
-                                <li><a href="#"><i class="fa-solid fa-plus"></i></a></li>
-                                <li><a href="#"><i class="fa-solid fa-expand"></i></a></li>
-                            </ul>
+                <div class="col-sm-3">
+                    <div class="thumb-wrapper">
+                        <span class="wish-icon"><i class="fa fa-heart-o"></i></span>
+                        <div class="img-box">
+                            <a asp-controller="Home" asp-action="Detail" asp-route-id="@item.Id"><img style="border: 1px solid #000000; max-width: 140px; width: 146px;" class="bookcover left" alt="Emperor of Rome" src="/Image/@item.ImgFileName" itemprop="image" onerror="javascript:imgErrorBlogRoll(this,120,180);"></a>
                         </div>
-                        <div class="part-2">
-                            <h3 class="product-title">@item.Name</h3>
-                            <h4 class="product-price">$@item.Price.ToString("N2")</h4>
+                        <div class="thumb-content">
+                            <h4><a asp-controller="Home" asp-action="Detail" asp-route-id="@item.Id">@item.Name</a></h4>
+                            <div class="star-rating">
+                                <ul class="list-inline">
+                                    <li class="list-inline-item"><i class="fa-regular fa-heart" style="color: #ff2424;"></i></li>
+                                    <li class="list-inline-item"><i class="fa-regular fa-heart" style="color: #ff2424;"></i></li>
+                                    <li class="list-inline-item"><i class="fa-regular fa-heart" style="color: #ff2424;"></i></li>
+                                    <li class="list-inline-item"><i class="fa-regular fa-heart" style="color: #ff2424;"></i></li>
+                                    <li class="list-inline-item"><i class="fa fa-star-o"></i></li>
+                                </ul>
+                            </div>
+                            <p class="item-price"><b>$@item.Price.ToString("N2")</b></p>
+                            <a asp-route="addcart" asp-route-productid="@item.Id" class="btn btn-primary">Add to Cart</a>
                         </div>
                     </div>
                 </div>

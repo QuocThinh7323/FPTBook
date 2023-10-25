@@ -1,4 +1,5 @@
-﻿@{
+﻿@model FPTBook.Models.Book
+@{
     ViewData["Title"] = "Privacy Policy";
 }
 <section class="header_text sub">
@@ -11,30 +12,18 @@
             <div class="col-md-12">
                 <div class="row">
                     <div class="col-md-6">
-                        <a href="~/Image/Book.png" class="thumbnail" data-fancybox="group1" data-caption="Description 1">
-                            <img src="~/Image/Book.png" alt="" />
+                        <a href="#" class="thumbnail" data-fancybox="group1" data-caption="Description 1">
+                            <img src="~/Image/@Model.ImgFileName" alt="" style="width: 50%" />
                         </a>
                     </div>
                     <div class="col-md-6">
                         <address>
-                            <strong>Brand:</strong> <span>Apple</span><br>
-                            <strong>Product Code:</strong> <span>Product 14</span><br>
-                            <strong>Reward Points:</strong> <span>0</span><br>
-                            <strong>Availability:</strong> <span>Out Of Stock</span><br>
+                            <strong>Category:</strong> <span>@Model.Category.Name</span><br>
+                            <strong>Availability:</strong> <span>@Model.Quantity</span><br>
+                            <strong>Description:</strong> <span>@Model.Description</span><br>
                         </address>
-                        <h4><strong>Price: $587.50</strong></h4>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <ul class="nav nav-tabs" id="myTab" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Description</a>
-                            </li>
-                        </ul>
-                        <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem</div>
-                        </div>
+                        <h4><strong>Price: $@Model.Price</strong></h4>
+                        <a asp-route="addcart" asp-route-productid="@Model.Id" class="btn btn-primary">Add to cart</i></a>
                     </div>
                 </div>
             </div>
