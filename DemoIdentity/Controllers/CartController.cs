@@ -1,5 +1,8 @@
-﻿using FPTBook.Models;
+﻿using FPTBook.Data;
+using FPTBook.Models;
 using FPTBookDemo.Data;
+using FPTBookDemo.Models;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
@@ -8,15 +11,17 @@ namespace FPTBook.Controllers
     public class CartController : Controller
     {
         private readonly ILogger<CartController> _logger;
+        private readonly UserManager<ApplicationUser> _userManager;
         private readonly ApplicationDbContext _db;
 
         // Key lưu chuỗi json của Cart
         public const string CARTKEY = "cart";
 
-        public CartController(ILogger<CartController> logger, ApplicationDbContext db)
+        public CartController(ILogger<CartController> logger, ApplicationDbContext db, UserManager<ApplicationUser> userManager)
         {
             _logger = logger;
             _db = db;
+            _userManager = userManager;
         }
 
 		// Hiện thị giỏ hàng
@@ -75,6 +80,34 @@ namespace FPTBook.Controllers
             SaveCartSession(cart);
             // Chuyển đến trang hiện thị Cart
             return RedirectToAction(nameof(Index));
+        }
+
+        /// Cập nhật
+		[Route("/updatecart", Name = "updatecart")]
+        [HttpPost]
+        public IActionResult UpdateCart([FromForm] int productid, [FromForm] int quantity)
+        {
+            // Cập nhật Cart thay đổi số lượng quantity ...
+            var cart = GetCartItems();
+            var cartitem = cart.Find(p => p.Book.Id == productid);
+            if (cartitem != null)
+            {
+                // Đã tồn tại, tăng thêm 1
+                cartitem.Quantity = quantity;
+            }
+            SaveCartSession(cart);
+            // Trả về mã thành công (không có nội dung gì - chỉ để Ajax gọi)
+            return Ok();
+        }
+
+        [Route("/checkout")]
+        public async Task<IActionResult> CheckOut()
+        {
+            ApplicationUser user = await _userManager.GetUserAsync(User);
+            CheckOut checkOut = new CheckOut();
+			checkOut.User = user;
+            checkOut.CartItems = GetCartItems();
+            return View(checkOut);
         }
     }
 }

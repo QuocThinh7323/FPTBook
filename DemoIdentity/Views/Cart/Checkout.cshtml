@@ -1,0 +1,97 @@
+﻿@model FPTBook.Data.CheckOut
+@{
+    ViewData["Title"] = "Checkout";
+	decimal total = 0;
+}
+
+<section class="header_text sub">
+	<img class="pageBanner" src="~/themes/images/pageBanner.png" alt="New products">
+	<h4><span>Check Out</span></h4>
+</section>
+<section class="main-content">
+	<div class="row">
+		<div class="span12">
+			<div class="accordion-inner">
+				<div class="row-fluid">
+					<div class="span6">
+						<h4>Your Personal Details</h4>
+						@* User information  *@
+						<div class="control-group">
+							<label class="control-label">First Name</label>
+							<div class="controls">
+								<input type="text" asp-for="@Model.User.FirstName" class="input-xlarge">
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label">Last Name</label>
+							<div class="controls">
+								<input type="text" asp-for="@Model.User.LastName" class="input-xlarge">
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label">Email Address</label>
+							<div class="controls">
+								<input type="text" asp-for="@Model.User.Email" class="input-xlarge">
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label">Telephone</label>
+							<div class="controls">
+								<input type="text" asp-for="@Model.User.PhoneNumber" class="input-xlarge">
+							</div>
+						</div>
+					</div>
+					<div class="span6">
+						<h4>Your Order</h4>
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>Remove</th>
+									<th>Image</th>
+									<th>Product Name</th>
+									<th>Quantity</th>
+									<th>Unit Price</th>
+									<th>Total</th>
+									<th>Action</th>
+								</tr>
+							</thead>
+							<tbody>
+								@foreach (var cartitem in Model.CartItems)
+								{
+									var subTotal = cartitem.Quantity * cartitem.Book.Price;
+									total += subTotal;
+
+									<tr>
+										<td><input type="checkbox" value="option1"></td>
+										<td><img class="img-fluid" style="width: 20%" alt="Book Image" src="/Image/@cartitem.Book.ImgFileName"></td>
+										<td>@cartitem.Book.Name</td>
+										<td><input asp-for="@cartitem.Quantity" id="@($"quantity-{cartitem.Book.Id}")" class="input-mini" /></td>
+										<td>$@cartitem.Book.Price</td>
+										<td>$@subTotal</td>
+										<td>
+											<button class="btn btn-outline-primary updatecartitem" data-productid="@cartitem.Book.Id">Update</button>
+										</td>
+									</tr>
+								}
+							</tbody>
+						</table>
+						<div class="block">
+							<h4 class="title">
+								<p class="cart-total right">
+									<strong>Total</strong>: $@(total.ToString("n0"))<br>
+								</p>
+							</h4>
+						</div>
+
+						<hr />
+						<p class="buttons center">
+							<button class="btn btn-primary" type="submit" id="checkout">Checkout</button>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
