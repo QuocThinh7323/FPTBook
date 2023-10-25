@@ -24,12 +24,12 @@ namespace FPTBook.Controllers
             _userManager = userManager;
         }
 
-		// Hiện thị giỏ hàng
-		[Route("/cart", Name = "cart")]
-		public IActionResult Index()
+        // Hiện thị giỏ hàng
+        [Route("/cart", Name = "cart")]
+        public IActionResult Index()
         {
-			return View(GetCartItems());
-		}
+            return View(GetCartItems());
+        }
 
         // Lấy cart từ Session (danh sách CartItem)
         List<CartItem> GetCartItems()
@@ -100,14 +100,65 @@ namespace FPTBook.Controllers
             return Ok();
         }
 
-        [Route("/checkout")]
+        // Xóa cart khỏi session
+        void ClearCart()
+        {
+            var session = HttpContext.Session;
+            session.Remove(CARTKEY);
+        }
+
+        [HttpGet]
         public async Task<IActionResult> CheckOut()
         {
             ApplicationUser user = await _userManager.GetUserAsync(User);
             CheckOut checkOut = new CheckOut();
-			checkOut.User = user;
+            checkOut.User = user;
             checkOut.CartItems = GetCartItems();
             return View(checkOut);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CheckOut(CheckOut checkOut)
+        {
+            ApplicationUser user = await _userManager.GetUserAsync(User);
+
+            decimal total = 0;
+            foreach (var item in GetCartItems())
+            {
+                total += item.Quantity * item.Book.Price;
+            }
+
+            Order order = new Order();
+            order.UserName = user.UserName;
+            order.User = user;
+            order.OrderTime = DateTime.Now;
+            order.Total = total;
+            order.State = 0;
+            _db.Order.Add(order);
+            _db.SaveChanges();
+
+            int orderId = order.Id;
+
+            foreach (var item in GetCartItems())
+            {
+                OrderItem orderItem = new OrderItem();
+                orderItem.BookID = item.Book.Id;
+                orderItem.Quantity = item.Quantity;
+                orderItem.OrderID = orderId;
+
+                _db.OrderItem.Add(orderItem);
+                _db.SaveChanges();
+
+                Book book = item.Book;
+                book.Quantity -= item.Quantity;
+
+                _db.Update(book);
+                _db.SaveChanges();
+            }
+
+            ClearCart();
+
+            return RedirectToAction("Shop", "Home");
         }
     }
 }
